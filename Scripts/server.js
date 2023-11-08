@@ -8,9 +8,10 @@ app.get('/', (req, res)=>{
     console.log("aqui")
     res.render('index', { port : port})
 })
-app.get('/sobre', (req, res)=>{
+app.get('/sobre/:nome', (req, res)=>{
     //mostrar nome do criador e afins
-    res.send("esta pagina esta em construção")
+    aux = req.params
+    res.send("ola " + aux.nome)
    
 })
 app.get('/google', (req, res)=>{
