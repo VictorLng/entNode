@@ -5,8 +5,9 @@ const port = 3000
 app.set("view engine", "ejs")
 
 app.get('/', (req, res)=>{
-    console.log("aqui")
-    res.render('index', { port : port})
+ 
+    let mug = {port : function(){console.log("hellow")}}
+    res.render('index', mug)
 })
 app.get('/sobre/:nome', (req, res)=>{
     //mostrar nome do criador e afins
