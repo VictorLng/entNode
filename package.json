@@ -11,7 +11,7 @@
   "description": "node Project",
   "main": "index.js",
   "scripts": {
-    "serveStart": "nodemon scripts/server.js"
+    "serveStart": "nodemon server.js"
   },
   "repository": {
     "type": "git",
