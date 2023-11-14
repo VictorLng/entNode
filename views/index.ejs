@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt_BR">
     <head>
+
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         <script src="/scripts/index.js" defer="defer"></script>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/tailwind.css">
+        <!--<link rel="stylesheet" href="/css/styles.css">-->
         <title>Node</title>
     </head>
-    <body>
-        
-        <div class="container">
-            <form action="#" type="get">
-                <input type="text" name="" id="buscarProduto">
-               
-                <button id="btn" type="submit" ></button>
-                <br>
-            </form>
+    <body class="bg-gradient-to-l from-blue-950  to-indigo-950">
+      
+        <div class="flex h-screen justify-center items-center">
+            <div class="flex text-center justify-center items-center rounded-xl p-20 pr-64 pl-64  shadow-md z-10">
+                <form action="javascript:void(0)" type="get">
+                    <input type="text" class="rounded-lg  p-2 pl-32 pr-32" name="" id="buscarProduto">
 
+                    <button id="btn" type="submit"></button>
+                    <br>
+                </form>
+            </div>
         </div>
-       <div id="allChamps">
-        
-       </div>
+        <div id="allChamps">
+            <img src="" class="w-96" id="champImage" alt="">
+        </div>
     </body>
 
 </html>
