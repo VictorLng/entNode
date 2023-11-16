@@ -5,26 +5,40 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-        <script src="/scripts/index.js" defer="defer"></script>
+        <script src="/scripts/apiLol.js" defer="defer"></script>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <link rel="stylesheet" href="/css/tailwind.css">
-        <!--<link rel="stylesheet" href="/css/styles.css">-->
-        <title>Node</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <title>LeagueNode</title>
     </head>
-    <body class="bg-gradient-to-l from-blue-950  to-indigo-950">
-      
-        <div class="flex h-screen justify-center items-center">
-            <div class="flex text-center justify-center items-center rounded-xl p-20 pr-64 pl-64  shadow-md z-10">
-                <form action="javascript:void(0)" type="get">
-                    <input type="text" class="rounded-lg  p-2 pl-32 pr-32" name="" id="buscarProduto">
 
-                    <button id="btn" type="submit"></button>
+    <body style="background-image: url('https://www.tribe.games/wp-content/uploads/2023/03/LOL-2022-KEY-ART.webp')" class="">
+      <header class="w-full shadow-xl " >
+        <div class=" p-2 bg-indigo-900 ">
+            <p class="">papapa pipipi popopo ppupup</p>
+        </div> 
+        <div class=" p-2 bg-blue-900">
+            <p class="">papapa pipipi popopo ppupup</p>
+        </div>
+      </header>
+        <div class="flex h-screen justify-center items-center">
+            <div class="flex focus-within:shadow-lg text-center justify-center items-center rounded-xl p-20 pt-24 pr-64 pl-64 bg-gradient-to-l from-blue-950  to-indigo-950 shadow-md z-10">
+                <form action="/champion" type="GET">
+                   <div class="p-3 pl-8 pr-8 flex justify-around rounded-full bg-slate-200">
+                    <input type="text" name="champName" autocomplete="off" class="border-none shadow-transparent outline-none rounded-lg bg-transparent w-96" name="" id="championName" value=>
+                    <button id="btn_search" class=" scale-150 p-px material-symbols-outlined" type="submit">
+                        search
+                        </button>
+                    </div> 
+
+                    
                     <br>
                 </form>
             </div>
         </div>
         <div id="allChamps">
-            <img src="" class="w-96" id="champImage" alt="">
+           
+            <img src=""  id="champImage" alt="">
         </div>
     </body>
 

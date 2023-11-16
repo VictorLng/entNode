@@ -1,24 +1,27 @@
 const { default: axios } = require('axios');
 const express = require('express')
+const bodyParser = require('body-parser')
 const path = require('path');
 const app = express()
 const port = 3000
 
+//O caminho para links e afins
 app.use(express.static(path.join(__dirname,'public')))
+// Body Parser usado para pegar os dados de um formulario
+let urlEncodedParser = app.use(bodyParser.urlencoded({extended: false }))
+let jsonParser = app.use(bodyParser.json())
+//engine para carregar o "html"
 app.set("view engine", "ejs")
 
-// function champElements(){
-//     axios.get()
-// }
+
+
 
 app.get('/', (req, res)=>{
-   var blink =  "bom dia"
-    res.render('index', {loggin : blink})
+    res.render('index', {})
 })
-app.get('/sobre/:nome', (req, res)=>{
-    //mostrar nome do criador e afins
-    aux = req.params
-    res.send("ola " + aux.nome)
+app.get('/champion',  (req, res)=>{
+    
+    res.render("champPage", {nomeCampeao :  req.query.champName})
    
 })
 app.get('/google', (req, res)=>{
@@ -27,4 +30,5 @@ app.get('/google', (req, res)=>{
 })
 
 app.listen(port) //http://localhost:port
+
 
