@@ -9,6 +9,9 @@
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <link rel="stylesheet" href="/css/tailwind.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Poppins:wght@200&family=Roboto:wght@300&display=swap" rel="stylesheet">
         <title>LeagueNode</title>
     </head>
 
@@ -22,12 +25,20 @@
         <div class=" p-2 bg-blue-900">
             <span><a href="javascript:void(0)">home</a></span>
             <span><a href="javascript:void(0)">champios</a></span>
-            <span><a href="javascript:void(0)">stats</a></span>
+            <span><a href="javascript:void(0)">stats </a></span>
         </div>
       </header>
+      <div class="flex justify-center ">
+        <p class=" flex font-sans font-semibold text-7xl absolute top-40 z-50">
+            League <img class="flex absolute " src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg" />
+          
+        </p>
+      </div>
         <div class="flex h-screen justify-center items-center">
-            <div class="flex text-center justify-center items-center rounded-xl p-20 pt-24 pr-64 pl-64 bg-gradient-to-l from-blue-950  to-indigo-950 shadow-xl z-10">
+            <div class="flex text-center justify-center items-center rounded-xl p-10 pt-14 pr-60 pl-60 bg-gradient-to-l from-blue-950  to-indigo-950 shadow-xl z-10">
+               
                 <form action="/champion" type="GET">
+                    
                    <div class="p-3 pl-8 pr-8 flex justify-around rounded-full bg-slate-200">
                     <input type="text" name="champName" autocomplete="off" class="border-none shadow-transparent outline-none rounded-lg bg-transparent w-96" name="" id="championName" value=>
                     <button id="btn_search" class=" scale-150 p-px material-symbols-outlined" type="submit">

@@ -15,19 +15,26 @@ app.set("view engine", "ejs")
 
 
 
-
-app.get('/', (req, res)=>{
-    res.render('index', {})
+app.get('/',   (req, res)=>{
+    res.render('index', {champT : 1 })
 })
 app.get('/champion',  (req, res)=>{
-    
-    res.render("champPage", {nomeCampeao :  req.query.champName})
+    champName = req.query.champName
+    let formatarTexto = champName.charAt(0).toUpperCase() + champName.slice(1).toLowerCase()
+    res.render("champPage", {nomeCampeao : formatarTexto })
    
 })
 app.get('/google', (req, res)=>{
     //clone do google(demems)
     res.send("google.com")
 })
+app.get('/maneirao', async function(req, res){  
+    const getApi = await fetch(`https://ddragon.leagueoflegends.com/cdn/13.22.1/data/pt_BR/champion.json`);
+    const lolApi = await getApi.json();
+    let filter = 
+       JSON.stringify(lolApi.data["Darius"].stats).split(",")
+    res.render('index', {champT : filter })
+  })
 
 app.listen(port) //http://localhost:port
 

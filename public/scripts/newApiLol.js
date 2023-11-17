@@ -7,13 +7,20 @@ function consumeApiAndShowImage(champ, x){
   axios.get(`https://ddragon.leagueoflegends.com/cdn/13.22.1/data/pt_BR/champion.json`)
   .then(response=>{
     //usar os parametros para colocar o nome do champ 
-    champImage.src = `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champ}_${x}.jpg` 
-    console.log(response.data.data[`${champ}`])
+    champProps = response.data.data[`${champ}`]
+    champImage.src = `https://ddragon.leagueoflegends.com/cdn/13.22.1/img/champion/${champ}.png` 
+    champPropsToArray = Object.keys(champProps).map(key => champProps[key])
+   console.log(champProps)
+    champPropsToArray.forEach( function(prop , indice){
+        
+      console.log(champPropsToArray[indice])
+    })
+
   })
   .catch(error => console.log(error))
 }
 
 //botão que executa a função 
 
-consumeApiAndShowImage(champName.value.charAt(0).toUpperCase() + champName.value.slice(1).toLowerCase(), 0)
+consumeApiAndShowImage(champName.value , 0)
 console.log(champName.value)
