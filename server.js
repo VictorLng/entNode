@@ -6,6 +6,7 @@ const app = express()
 const port = 3000
 const db = require('./module/db');
 const { json } = require('sequelize');
+const { accessSync } = require('fs');
 
 //O caminho para links e afins
 app.use(express.static(path.join(__dirname,'public')))
@@ -24,7 +25,10 @@ function formatText(textToFormat){
 app.get('/',   (req, res)=>{
     res.render('index', {champT : 1 })
 })
-app.get('/champion', async function(req, res){
+app.get('/champions', async function(req, res){
+    res.render("championsPage", {champs : "champName"})
+})
+app.get('/champ', async function(req, res){
     const getApi = await fetch(`https://ddragon.leagueoflegends.com/cdn/13.22.1/data/pt_BR/champion.json`);
     const lolApi = await getApi.json();
     let champProps = Object.keys(lolApi).map(key => lolApi[key])

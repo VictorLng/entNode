@@ -15,8 +15,8 @@
         <title>LeagueNode</title>
     </head>
 
-    <body style="background-image: url('https://www.tribe.games/wp-content/uploads/2023/03/LOL-2022-KEY-ART.webp')" class="bg-cover">
-      <header class="w-full shadow-xl " >
+    <body class="bg-gradient-to-l from-emerald-900  to-sky-950 shadow-xl ">
+      <header class="w-full shadow-xl" >
         <div class=" p-2 bg-indigo-900 ">
             <input type="checkbox" name="ilumination-style" id="ilumination-style">
             <span><a href="javascript:void(0)">login</a></span>
@@ -24,37 +24,37 @@
         </div> 
         <div class=" p-2 bg-blue-900">
             <span><a href="javascript:void(0)">home</a></span>
-            <span><a href="javascript:void(0)">champios</a></span>
+            <span><a href="/champions">champios</a></span>
             <span><a href="javascript:void(0)">stats </a></span>
         </div>
       </header>
-      <div class="flex justify-center ">
-        <p class=" flex font-sans font-semibold text-7xl absolute top-40 z-50">
-            League <img class="flex absolute " src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg" />
-          
-        </p>
-      </div>
-        <div class="flex h-screen justify-center items-center">
-            <div class="flex text-center justify-center items-center rounded-xl p-10 pt-14 pr-60 pl-60 bg-gradient-to-l from-blue-950  to-indigo-950 shadow-xl z-10">
+     <div> 
+      <div class="text-center text-9xl justify-center items-center pt-10"> 
+            <p class="text-gray-900">League</p>
                
-                <form action="/champion" type="GET">
-                    
-                   <div class="p-3 pl-8 pr-8 flex justify-around rounded-full bg-slate-200">
-                    <input type="text" name="champName" autocomplete="off" class="border-none shadow-transparent outline-none rounded-lg bg-transparent w-96" name="" id="championName" value=>
+            <p class="text-green-900">Node</p>
+      </div>
+          <div class="flex h-screen justify-center items-center">
+              <div class="flex text-center justify-center items-center rounded-xl p-10 pt-14 pr-60 pl-60 bg-gradient-to-l from-emerald-900  to-sky-950 shadow-xl z-10">
+                  
+                  <form action="/champ" type="GET">
+                      
+                      <div class="p-3 pl-8 pr-8 flex rounded-full bg-slate-200">
+                          <input type="text" name="champName" autocomplete="off" class="border-none shadow-transparent outline-none rounded-lg bg-transparent w-96" name="" id="championName" value=>
                     <button id="btn_search" class=" scale-150 p-px material-symbols-outlined" type="submit">
                         search
-                        </button>
-                    </div> 
-
-                    
-                    <br>
+                    </button>
+                </div> 
+            </div>
+      </div>
+             <br>
                 </form>
             </div>
-        </div>
         <div id="allChamps">
            
             <img src=""  id="champImage" alt="">
         </div>
+        
     </body>
 
 </html>
