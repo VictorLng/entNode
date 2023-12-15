@@ -11,19 +11,20 @@
 </head>
 
 <body>
-<input type="hidden" id="championName" value="<%= nomeCampeao %>" >
+<input type="hidden" id="championName" value="" >
     <div id="showChamp">
-         <p id="lindo"></p>
-        <img src="" id="champImage" alt="Champ" >
-<<<<<<< HEAD
+         <p id="champName"><%= nomeCampeao %></p>
+        <img src="https://ddragon.leagueoflegends.com/cdn/13.22.1/img/champion/<%= nomeCampeao %>.png" id="champImage" alt="Champ" >
+
         <img src="" id="pasiveChamp" alt="passive" >
         <img src="" id="Abilit1" alt="Q" >
         <img src="" id="Abilit2" alt="W" >
         <img src="" id="Abilit3" alt="E" >
         <img src="" id="Abilit4" alt="R" >
-=======
-        <p>a</p>
->>>>>>> 2afda47c130bc9039fca1322bcadb5d49aaa4af0
+
+        <p><%= lolApi %></p>
+     
     </div>
 </body>
+
 </html>
