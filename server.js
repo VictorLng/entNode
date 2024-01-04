@@ -34,6 +34,7 @@ app.get('/champ', async function(req, res){
     let champProps = Object.keys(lolApi).map(key => lolApi[key])
     champName = req.query.champName
     champName == 'leesin' || champName == 'lee' ? champName = "lee sin" : champName = req.query.champName
+    champName == 'jarvan4' || champName == 'jarvan' ? champName = "Jarvan IV" : champName = req.query.champName
     let formatarTexto = formatText(champName)
     res.render("champPage", {nomeCampeao : formatarTexto, lolApi : champProps})
    
