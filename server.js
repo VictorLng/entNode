@@ -31,7 +31,14 @@ app.get('/champions', async function(req, res){
 app.get('/champ', async function(req, res){
     const getApi = await fetch(`https://ddragon.leagueoflegends.com/cdn/13.22.1/data/pt_BR/champion.json`);
     const lolApi = await getApi.json();
-    let champProps = Object.keys(lolApi).map(key => lolApi[key])
+    const champProps = Array();
+    champProps['passive'] = 'passive'
+    champProps['abilityQ'] = 'abilidade'
+    champProps['abilityW'] = 'abilidade'
+    champProps['abilityE'] = 'abilidade'
+    champProps['utimate'] = 'utimate'
+    console.log(lolApi);
+    //let champProps = Object.keys(lolApi).map(key => lolApi[key])
     champName = req.query.champName
     champName == 'leesin' || champName == 'lee' ? champName = "lee sin" : champName = req.query.champName
     champName == 'jarvan4' || champName == 'jarvan' ? champName = "Jarvan IV" : champName = req.query.champName
@@ -39,10 +46,7 @@ app.get('/champ', async function(req, res){
     res.render("champPage", {nomeCampeao : formatarTexto, lolApi : champProps})
    
 })
-app.get('/google', (req, res)=>{
-    //clone do google(demems)
-    res.send("google.com")
-})
+
 app.get('/maneirao', async function(req, res){  
     const getApi = await fetch(`https://ddragon.leagueoflegends.com/cdn/13.22.1/data/pt_BR/champion.json`);
     const lolApi = await getApi.json();
